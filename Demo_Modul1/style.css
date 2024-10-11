@@ -1,0 +1,106 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url('Blue And White Modern.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #333;
+}
+
+/* Tambahkan efek overlay untuk memperjelas latar belakang */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,1, 255, 0,5, 0.5); /* Warna overlay transparan */
+  z-index: -1; /* Pastikan overlay berada di belakang konten */
+}
+
+/* Header Styles */
+header {
+  background: rgba(0, 150, 136, 0.7); /* Semi-transparan di atas background */
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  letter-spacing: 2px;
+}
+header p {
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+/* Main Content Styles */
+main {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Background putih semi-transparan */
+  min-height: 500px;
+  border-radius: 8px;
+}
+.product {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.product-item {
+  background-color: rgba(240, 244, 195, 0.9); /* Semi-transparan */
+  border-radius: 8px;
+  width: 30%;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+.product-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.product-item h3 {
+  margin: 40px 0;
+  color: #388E3C;
+}
+.product-item p {
+  color: #757575;
+}
+.product-item button {
+  padding: 10px 20px;
+  background-color: #009688;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.product-item button:hover {
+  background-color: #00796B;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #004D40;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+footer p {
+  margin: 0;
+  font-size: 1em;
+}
+footer a {
+  color: #80CBC4;
+  text-decoration: none;
+}
