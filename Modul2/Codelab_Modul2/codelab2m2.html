@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f0e1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background-color: #4CAF50;
+            padding: 70px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px; /* Lebar form diperlebar */
+        }
+        .form-container h2 {
+            text-align: center;
+            color: white;
+            margin-bottom: 20px; /* Tambahkan jarak bawah */
+        }
+        .form-container label {
+            display: block;
+            margin: 15px 0 5px; /* Tambahkan jarak vertikal lebih besar */
+            color: white;
+            font-size: 16px; /* Besarkan font label */
+        }
+        .form-container input, .form-container textarea {
+            width: 100%;
+            padding: 12px; /* Perbesar padding agar terlihat lebih proporsional */
+            margin-bottom: 15px; /* Perbesar jarak antara input */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px; /* Sesuaikan ukuran teks input */
+        }
+        .form-container button {
+            width: 100%;
+            padding: 12px; /* Tambahkan padding ke tombol */
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px; /* Sesuaikan ukuran teks tombol */
+            transition: background-color 0.3s ease;
+        }
+        .form-container button:hover {
+            background-color: #333; /* Efek hover untuk tombol */
+        }
+        button:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Form Pendaftaran</h2>
+        <form onsubmit="return validateForm()">
+            <label for="name">Nama</label>
+            <input type="text" id="name" placeholder="Masukkan nama">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Masukkan email">
+
+            <label for="address">Alamat Lengkap</label>
+            <textarea id="address" rows="5" placeholder="Masukkan alamat"></textarea> <!-- Perbesar area teks -->
+
+            <button type="submit">Daftar</button>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var address = document.getElementById("address").value;
+
+            if (name === "") {
+                alert("Nama tidak boleh kosong");
+                return false;
+            }
+            if (email === "") {
+                alert("Email tidak boleh kosong");
+                return false;
+            }
+            if (address === "") {
+                alert("Alamat tidak boleh kosong");
+                return false;
+            }
+
+            alert("Form berhasil disubmit!");
+            return true;
+        }
+    </script>
+
+</body>
+</html>
